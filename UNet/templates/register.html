@@ -1,0 +1,82 @@
+{% extends "Base/user_authen.html" %}
+{% block content %}
+    <div class="headers">
+        <div class="brand-name-container">
+            <h1 id="brand-name">UNet</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-box">
+            <div class="register-form">
+                <form method="post" class="row g-3">
+                    {{ register_form.hidden_tag() }}
+                    <div class="col-md-6">
+                        {{ register_form.first_name.label }}{{ register_form.first_name(class="form-control") }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ register_form.last_name.label }}{{ register_form.last_name(class="form-control") }}
+                    </div>
+                    <div class="col-12">
+                        {{ register_form.email.label }}{{ register_form.email(class="form-control") }}
+                    </div>
+                    <div class="col-12">
+                        {{ register_form.password.label }}{{ register_form.password(class="form-control") }}
+                    </div>
+                    <ul id="password-mk-recomm-container">
+                        <li class="password-mk-recomm">Your password can't be too similar to your other personal information.</li>
+                        <li class="password-mk-recomm">Your password must contain at least 8 characters.</li>
+                        <li class="password-mk-recomm">Your password can't be entirely numeric</li>
+                    </ul>
+                    <div class="col-12">
+                        {{ register_form.conform_password.label }}{{ register_form.conform_password(class="form-control") }}
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <label class="form-check-label" for="gridCheck" style="color: black;">
+                                Check me out
+                            </label>
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        {{ register_form.register(class="btn btn-primary") }}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <style>
+        body{
+            background-image: url("{{ url_for('static', filename='register-bg.jpg') }}");
+            background-size: cover;
+        }
+        .register-form{
+            padding: 25px;
+        }
+        .password-mk-recomm{
+            font-size: 11px;
+            color: rgb(77, 73, 73);
+        }
+        #password-mk-recomm-container{
+            padding-left: 20px;
+        }
+        .form-box{
+            position: absolute;
+            top: 10%;
+            height: 512px;
+        }
+        .form-box:hover{
+            position: absolute;
+            top: 10%;
+            height: 510px;
+        }
+        .headers{
+            position: absolute;
+            left: 44%;
+        }
+        #brand-name{
+            text-shadow: 2px 2px 5px #291887;
+            filter: brightness(100%);
+        }
+    </style>
+{% endblock %}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='logo.ico') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}"/>
+    <title>UNet</title>
+  </head>
+  <body style="background-image: url({{ url_for('static', filename='friendship.jpg') }});">
+    <header>
+      <nav class="light-unet-nav">
+        <div class="nav-bar-content">
+          <div class="content-brand-name">
+            <a href="{{ url_for('home') }}" style="text-decoration: none;">
+              <h1 id="brand-name">UNet</h1>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="intro-div">
+      <div class="brand-name-container">
+        <h1 id="brand-name-mid">UNet</h1>
+      </div>
+    </div>
+    <div class="middle-box-background"></div>
+    <div class="middle-part-login-register-link">
+      <div class="login-page-link">
+        <a href="{{ url_for('login') }}" id="login-link">Login</a>
+      </div>
+      <div class="register-page-link">
+        <a href="{{ url_for('register') }}" id="register-link">Create an account</a>
+      </div>
+      <br/>
+      <span id="trending">
+        <a href="#" id="trending-link">View trending once</a>
+      </span>
+    </div>
+    <div class="intro-lines">
+      <h4 id="intro-line">Discover and explore the world here.<br/>
+        <span id="line2">Come and join our community!</span>
+      </h4>
+    </div>
+    <script src="{{ url_for('static', filename='home.js') }}"></script>
+  </body>
+</html>
