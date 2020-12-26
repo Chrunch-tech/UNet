@@ -1,0 +1,65 @@
+*{
+    font-family: 'Sniglet', cursive;
+    font-family: 'Varela Round', sans-serif;
+}
+
+#brand-name{
+    font-family: 'Sniglet', cursive;
+    font-size: 45px;
+    color: #fc03ad;
+}
+
+body{
+    background-size: cover;
+}
+
+.form-box{
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+    top: 25%;
+    left: 30%;
+}
+
+.form-box:hover{
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    box-shadow: 0 4px 8px 0 black;
+    border-radius: 10px;
+    top: 25%;
+    left: 30%;
+}
+
+body, html {
+    height: 100%;
+}
+
+.background-img-blur-login{
+    /* Image is taken from ->  https://pixabay.com */
+    background-image: url("https://cdn.pixabay.com/photo/2019/02/26/05/44/fireworks-4021214_960_720.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+}
+
+.text{
+    color: ghostwhite;
+}
+
+.form-text{
+    color: ghostwhite;
+}
+
+.form-check-label{
+    color: ghostwhite;
+}
+
+.form-box-header{
+    padding-left: 60px;
+    padding-top: 10px;
+}

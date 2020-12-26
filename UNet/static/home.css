@@ -1,0 +1,217 @@
+*{
+    font-family: 'Sniglet', cursive;
+    font-family: 'Varela Round', sans-serif;
+}
+
+body{
+    background-size: cover;
+}
+
+#brand-name{
+    color: #291887;
+    font-family: 'Sniglet', cursive;
+    font-size: 35px;
+}
+
+
+.content-brand-name{
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    bottom: 550px;
+    margin-top: 0px;
+    height: 90px;
+}
+
+.search{
+    width: 500px;
+    height: 40px;
+}
+
+.search-form{
+    position: absolute;
+    left: 120px;
+    top: 35px;
+}
+
+#search-input-box{
+    height: 30px;
+    border-radius: 10px;
+}
+
+#search-active{
+    transition-delay: 10s;
+    outline: none;
+    width: 577px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+#brand-name-hover-active{
+    font-family: 'Sniglet', cursive;
+    font-size: 35px;
+    color:  #fc03ad;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+#login-link{
+    opacity: 1.0;
+    display: block;
+    width: 350px;
+    height: 25px;
+    filter: brightness(100%);
+    background: #fc03ad;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+    text-decoration: none;
+}
+
+.middle-part-login-register-link{
+    position: absolute;
+    top: 50%;
+    left: 34%;
+}
+
+.middle-box-background{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.911);
+    top: 35%;
+    left: 30%;
+    width: 400px;
+    height: 150px;
+    padding: 50px;
+    padding-top: 100px;
+    opacity: 0.9;
+    border-radius: 40px;
+    filter: blur(8px);
+}
+
+#register-link{
+    display: block;
+    width: 350px;
+    height: 25px;
+    filter: brightness(100%);
+    background: #291887;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+    text-decoration: none;
+}
+
+.register-page-link{
+    padding-top: 10px;
+}
+
+#login-link-hover{
+    display: block;
+    width: 350px;
+    height: 25px;
+    filter: brightness(100%);
+    background: #cc038c;;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+    text-decoration: none;
+}
+
+#register-link-hover{
+    display: block;
+    width: 350px;
+    height: 25px;
+    filter: brightness(100%);
+    background: #180874;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+    text-decoration: none;
+}
+
+#login-link-click{
+    display: block;
+    width: 350px;
+    height: 25px;
+    filter: brightness(100%);
+    background: #990269;;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+    text-decoration: none;
+}
+
+#register-link-click{
+    display: block;
+    width: 350px;
+    height: 25px;
+    filter: brightness(100%);
+    background: #13065c;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+    text-decoration: none;
+}
+
+.intro-div{
+    position: absolute;
+    top: 15%;
+    left: 43%;
+    font-family: 'Sniglet', cursive;
+}
+
+#brand-name-mid{
+    font-family: 'Sniglet', cursive;
+    color: #291887;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px #fc03ad;
+
+}
+
+.intro-lines{
+    position: absolute;
+    top: 78%;
+    left: 38%;
+}
+
+#intro-line{
+    color: #fc03ad
+}
+
+#line2{
+    font-size: small;
+    color: #291887;
+    padding-left: 40px;
+}
+
+#trending{
+    padding-left: 110px;
+}
+
+#trending-link{
+    color: ghostwhite; 
+    text-decoration: none;
+}
+
+#trending-link:hover{
+    color: ghostwhite;
+    text-decoration: underline;
+}
