@@ -11,7 +11,7 @@ class Users(db.Model):
     email = db.Column(db.String(50), nullable=False, unique=True)
     friends = db.Column(db.String(50), nullable=True, unique=False)
     following = db.Column(db.String(50), nullable=True, unique=False)
-    followers = db.Column(db.Integer, nullable=False, unique=False)
+    followers = db.Column(db.String(50), nullable=False, unique=False)
     password =  db.Column(db.String(1000), nullable=False, unique=False)
     profile_img = db.Column(db.String(60), nullable=True, unique=False)
     about = db.Column(db.Text, nullable=True, unique=False)
