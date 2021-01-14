@@ -13,3 +13,4 @@ bcrypt = Bcrypt(app)
 db = SQLAlchemy(app)
 
 from . import route
+from . import db_model
