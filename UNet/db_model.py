@@ -24,7 +24,7 @@ class UserContent(db.Model):
     shared_images = db.Column(db.String(25), nullable=True, unique=True)
     videos = db.Column(db.String(25), nullable=True, unique=True)
     posts = db.Column(db.String(5000), nullable=True, unique=False)
-    date_time = db.Column(db.DateTime, default=datetime.datetime.utcnow)
+    date_time = db.Column(db.DateTime, nullable=False, default=datetime.datetime.utcnow)
 
     def  __repr__(self):
         return f"<User_content>[shared_images: {self.shared_images}, videos: {self.videos}, posts: {self.posts}, date_time: {self.date_time}]"
