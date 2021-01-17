@@ -22,7 +22,7 @@ def dated_url_for(endpoint, **values):
     return url_for(endpoint, **values)
 
 
-@app.route('/', methods=["GET", "POST"])
+@app.route('/')
 def home():
     """
     Defining the backend of home page
