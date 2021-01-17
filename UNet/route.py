@@ -51,19 +51,27 @@ def register():
     """
     register_form = RegistrationForm()
     if register_form.validate_on_submit():
-        user_id = secrets.token_hex(50)
         first_name = register_form.first_name.data
         last_name = register_form.last_name.data
         email = register_form.email.data
         password = register_form.password.data
         comform_password = register_form.conform_password.data
         if password == comform_password:
-            user = Users(user_id=user_id, first_name=first_name,
-                last_name=last_name, email=email,
-                password=bcrypt.generate_password_hash(password).decode("utf-8"))
-            db.session.add(user)
-            db.session.commit()
-            flash('Your account is successfully created! Now you\'ll able to login')
+            while True:
+                try:
+                    user_id = secrets.token_hex(50)
+                    if comform_password == password:
+                        user = Users(user_id=user_id, first_name=first_name,
+                            last_name=last_name, email=email,
+                            password=bcrypt.generate_password_hash(password).decode("utf-8"))
+                        db.session.add(user)
+                        db.session.commit()
+                        flash('Your account is successfully created! Now you\'ll able to login')
+                    else:
+                        flash("Password dosen't match")
+                        return redirect(url_for('register'))
+                except Exception:
+                    continue
             return redirect(url_for('login'))
         else:
             flash('Password dose\'nt match')
