@@ -1,8 +1,10 @@
 """ Defining all the routes and apps used in this website """
-from . import app
+from . import app, bcrypt, db
+from .db_model import Users, UserContent
 from .form import Search, Login, RegistrationForm
-from flask import render_template, session, url_for, redirect
+from flask import render_template, session, url_for, redirect, flash
 import os
+import secrets
 
 
 @app.context_processor
@@ -49,5 +51,21 @@ def register():
     """
     register_form = RegistrationForm()
     if register_form.validate_on_submit():
-        return redirect(url_for('login'))
+        user_id = secrets.token_hex(50)
+        first_name = register_form.first_name.data
+        last_name = register_form.last_name.data
+        email = register_form.email.data
+        password = register_form.password.data
+        comform_password = register_form.conform_password.data
+        if password == comform_password:
+            user = Users(user_id=user_id, first_name=first_name,
+                last_name=last_name, email=email,
+                password=bcrypt.generate_password_hash(password).decode("utf-8"))
+            db.session.add(user)
+            db.session.commit()
+            flash('Your account is successfully created! Now you\'ll able to login')
+            return redirect(url_for('login'))
+        else:
+            flash('Password dose\'nt match')
+            return redirect(url_for('register'))
     return render_template('register.html', register_form=register_form)
