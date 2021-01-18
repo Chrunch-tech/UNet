@@ -11,6 +11,7 @@ class Users(db.Model):
     following = db.Column(db.String(50), nullable=True, unique=False)
     followers = db.Column(db.String(50), nullable=True, unique=False)
     password =  db.Column(db.String(1000), nullable=False, unique=False)
+    bg_img = db.Column(db.String(60), unique=True)
     profile_img = db.Column(db.String(60), unique=True, default="static/default.svg")
     about = db.Column(db.Text, nullable=True, unique=False)
     user_content = db.relationship('UserContent', backref="users", lazy=True)

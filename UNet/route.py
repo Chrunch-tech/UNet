@@ -78,3 +78,11 @@ def register():
             flash('Password dose\'nt match')
             return redirect(url_for('register'))
     return render_template('register.html', register_form=register_form)
+
+
+@app.route('/profile', methods=["GET", "POST"])
+def profile():
+    search = Search()
+    if search.validate_on_submit():
+        return redirect(url_for('profile'))
+    return render_template('profile.html', search=search)
