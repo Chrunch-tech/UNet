@@ -1,49 +1,63 @@
-{% extends "Base/user_authen.html" %}
-{% block content %}
-    {% for message in get_flashed_messages() %}
-        <div class="alert alert-success">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            {{ message }}
-        </div>
-    {% endfor %}
-    <div class="background-img-blur-login"></div>
-    <div class="header-content-container">
-        <div class="greeting-content">
-            <h2 id="brand-name">UNet</h2>
-        </div>
+{% extends "Base/user_authen.html" %} {% block content %} {% for message in
+get_flashed_messages() %}
+<div class="alert alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  {{ message }}
+</div>
+{% endfor %}
+<div class="background-img-blur-login"></div>
+<div class="header-content-container">
+  <div class="greeting-content">
+    <h2 id="brand-name">UNet</h2>
+  </div>
+</div>
+<div class="container">
+  <div class="form-box">
+    <div class="form-box-header">
+      <h3
+        style="
+          color: ghostwhite;
+          text-shadow: 2px 2px 5px #fc03ad;
+          filter: brightness(100%);
+        "
+      >
+        Welcome, back
+      </h3>
     </div>
-    <div class="container">
-        <div class="form-box">
-            <div class="form-box-header">
-                <h3 style="color: ghostwhite; text-shadow: 2px 2px 5px #fc03ad; filter: brightness(100%);">Welcome, back</h3>
-            </div>
-            <div class="login-form" style="padding: 20px;">
-                <form method="post">
-                    {{ login_form.hidden_tag() }}
-                    <div class="mb-3">
-                        {{ login_form.email.label(class="text") }}{{ login_form.email(class="form-control", id="exampleInputEmail1") }}
-                    </div>
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    <br/>
-                    <div class="mb-3">
-                        {{ login_form.password.label(class="text") }}{{ login_form.password(class="form-control", id="exampleInputPassword1") }}
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    {{ login_form.sign_in(class="btn btn-primary", style="width: 120px;") }}
-                </form>
-            </div>
+    <div class="login-form" style="padding: 20px">
+      <form method="post">
+        {{ login_form.hidden_tag() }}
+        <div class="mb-3">
+          {{ login_form.email.label(class="text") }}{{
+          login_form.email(class="form-control", id="exampleInputEmail1") }}
         </div>
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+        <br />
+        <div class="mb-3">
+          {{ login_form.password.label(class="text") }}{{
+          login_form.password(class="form-control", id="exampleInputPassword1")
+          }}
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1"
+            >Check me out</label
+          >
+        </div>
+        {{ login_form.sign_in(class="btn btn-primary", style="width: 120px;") }}
+      </form>
     </div>
-    <style>
-        #brand-name{
-            position: absolute;
-            top: 7%;
-            left: 44%;
-            text-shadow: 2px 2px 5px #de336c;
-            filter: brightness(100%);
-        }
-    </style>
+  </div>
+</div>
+<style>
+  #brand-name {
+    position: absolute;
+    top: 7%;
+    left: 44%;
+    text-shadow: 2px 2px 5px #de336c;
+    filter: brightness(100%);
+  }
+</style>
 {% endblock %}
