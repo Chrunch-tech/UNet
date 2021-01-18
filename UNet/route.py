@@ -58,21 +58,22 @@ def register():
         comform_password = register_form.conform_password.data
         if password == comform_password:
             while True:
-                try:
-                    user_id = secrets.token_hex(50)
-                    if comform_password == password:
-                        user = Users(user_id=user_id, first_name=first_name,
+                user_id = secrets.token_hex(50)
+                if comform_password == password:
+                    if len(password) >= 8:
+                        user = Users(id=str(user_id), first_name=first_name,
                             last_name=last_name, email=email,
                             password=bcrypt.generate_password_hash(password).decode("utf-8"))
                         db.session.add(user)
                         db.session.commit()
                         flash('Your account is successfully created! Now you\'ll able to login')
+                        return redirect(url_for('login'))
                     else:
-                        flash("Password dosen't match")
+                        flash("The lenght of your password should be greater than or equal to 8")
                         return redirect(url_for('register'))
-                except Exception:
-                    continue
-            return redirect(url_for('login'))
+                else:
+                    flash("Password dosen't match")
+                    return redirect(url_for('register'))
         else:
             flash('Password dose\'nt match')
             return redirect(url_for('register'))

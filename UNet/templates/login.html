@@ -1,5 +1,11 @@
 {% extends "Base/user_authen.html" %}
 {% block content %}
+    {% for message in get_flashed_messages() %}
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ message }}
+        </div>
+    {% endfor %}
     <div class="background-img-blur-login"></div>
     <div class="header-content-container">
         <div class="greeting-content">
