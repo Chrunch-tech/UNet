@@ -12,28 +12,39 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='profile.css') }}"
     />
-    <title>Document</title>
+    <link rel="icon" href="{{ url_for('static', filename='logo.ico') }}" />
+    <title>UNet</title>
   </head>
   <body>
     <header>
       <nav>
-        <div class="search-form-explore">
-          {{ search.hidden_tag() }} {{ serach.serach.label }}{{
-          serach.serach(placeholder="Search") }}
+        <div class="right-side">
+          <div class="brand-info">
+            <a href="{{ url_for('home') }}">
+              <span id="brand-name">UNet</span>
+            </a>
+          </div>
+          <div class="search-form-explore">
+            {{ search.hidden_tag() }} {{ search.search.label }}{{
+            search.search(placeholder="Search", id="search-form-explore") }}
+          </div>
         </div>
-        <div class="nav-links">
-          <a href="#">Explore</a>
-          <a href="#">Profile</a>
-          <a href="#">Messages</a>
-          <a href="#">Settings</a>
-        </div>
-        <div class="profile-info">
-          <img
-            src="{{ url_for('static', filename='default.svg') }}"
-            alt="profile-img"
-          />
+        <div class="left-side">
+          <div class="nav-links">
+            <a href="#" class="links">Explore</a>
+            <a href="#" class="links">Profile</a>
+            <a href="#" class="links">Messages</a>
+            <a href="#" class="links">Settings</a>
+          </div>
+          <div class="profile-info">
+            <img
+              src="{{ url_for('static', filename='default.svg') }}"
+              alt="profile-img"
+            />
+          </div>
         </div>
       </nav>
     </header>
+    <script src="{{ url_for('static', filename='profile.js') }}"></script>
   </body>
 </html>

@@ -1,3 +1,111 @@
 *{
     font-family: 'Sniglet', cursive;
 }
+
+body{
+    margin: 0px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to right bottom, #fc03ad, #291887ad);
+}
+
+.links{
+    transition: 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 100px;
+    color: ghostwhite;
+}
+
+.links:hover{
+    transition: 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 5px;
+    margin-left: 100px;
+    color: ghostwhite;
+}
+
+
+.profile-info img{
+    width: 25px;
+    height: 25px;
+    border-radius: 30%;
+}
+
+.profile-info{
+    display: flex;
+    background-color: lightgray;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+#brand-name{
+    transition: 0.5s;
+    color: #291887;
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#brand-name:hover{
+    transition: 0.5s;
+    text-shadow: 2px 2px 5px #291887b2;
+    color: #fc03e7;
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.right-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-form-explore{
+    transition: 0.5s;
+    margin-left: 20px;
+    width: 500px;
+    padding: 5px;
+    border-radius: 1rem;
+    border: none;
+    opacity: 0.6;
+    outline: none;
+}
+
+#search-form-explore-active{
+    transition: 0.5s;
+    margin-left: 20px;
+    width: 500px;
+    padding: 5px;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+}
+
+.left-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-info a{
+    text-decoration: none;
+}
